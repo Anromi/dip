@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Ширина текстового поля</title>
+    <style>
+   #userForm {
+    width: 200px; /*Определяем пиксельную ширину текстового поля с помощью CSS-свойств */
+   }
+
+    /* text-field */
+    .text-field {
+      margin-bottom: -0.3rem;/*растояние между текстом*/
+    }
+   .text-field__label {
+      display: block;
+      margin-bottom: -0.1rem; /*растояние между полями*/
+    }
+   body {
+       font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 1.2em; /* размер всего текста */
+      font-weight: 400; /*  */
+      line-height: 2; /* ширина между полями*/
+      color: #212529; /* цвет текста User Name, Password*/
+      background-color: #fff; /* цвет фона */
+
+    }
+
+    .text-field__input {
+      display: block;/**/
+      width: 60%;/* длина поля */
+      height: calc(1.25rem + 1px);/**/
+      padding: 0.375rem 0.75rem;/**/
+      font-family: inherit;/**/
+      font-size: 1rem; /*размер текста внутри поля*/
+      font-weight: 400;/**/
+      line-height: 11.5;/**/
+      color: #212529;/**/
+      background-color: #fff;/**/
+      background-clip: padding-box;/**/
+      border: 1px solid #bdbdbd;/*обводка поля ширина*/
+      border-radius: 1.1rem;/**/
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;/**/
+    }
+
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    .text-field__input::placeholder {
+      color: #212529;
+      opacity: 0.4; /* прозрачность */
+    }
+
+    .text-field__input:focus {
+      color: #212529;
+      background-color: #fff; /*подсветка где пишешь*/
+      border-color: #bdbdbd; /*подствека нижнего контура*/
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+    }
+
+    .text-field__input:disabled,
+    .text-field__input[readonly] {
+      background-color: #f5f5f5;
+      opacity: 1;
+    }
+
+    .text-login__btn {
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 6px 20px;
+    margin-top:1%; /*кнопка выше ниже*/
+	text-align: center;/**/
+    text-decoration: none;/**/
+    transition: all 250ms;
+    border: 0;
+    font-size: 13px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+
+    .text-login {
+    width: 65%;
+    text-align: center;
+
+    }
+
+    a {
+      font-size: 1.2rem;
+      font-weight: 50;
+    }
+    .text-registr{
+
+    }
+    
+      /* боковое меню */
+  .sidenav {
+      height: 100%; /* высота */
+      width: 180px; /* ширина*/
+      position: fixed; /* Фиксированная боковая панель (остается на месте при прокрутке) */
+      z-index: 1; /* Stay on top */
+      top: 0; /* Stay at the top */
+      left: 0;
+      background-color: #c2fbd7; /* цвет фона меню */
+      overflow-x: hidden; /* Отключить горизонтальную прокрутку */
+      padding-top: 20px;/* сдвиг текста выше ниже */
+      opacity: 1.0; /* прозрачность */
+  }
+
+  /* Ссылки меню навигации */
+  .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #000000;
+      display: block;
+      font-weight: 400;
+  }
+
+  /* когда вы наводите курсор на навигационные ссылки, меняете их цвет */
+  .sidenav a:hover {
+      background: #80C8A0;
+      color: white;
+  }
+
+  /* Содержимое страницы стилей */
+  .main {
+      margin-left: 160px; /* То же, что и ширина боковой панели*/
+      padding: 0px 10px;
+  }
+  
+  .widget-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #222;
+  font-size: 16px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  border-left: 2px solid #006400;
+}
+
+.level_o select {
+  width: 200px;
+  padding: 7px;
+  height: 38px;
+  border: none;
+  /*background: #008000;*/
+  font-family: 'Russo One', sans-serif;
+  /*color: #f1efef;*/
+  font-size: 17px;
+  box-shadow: 0 5px 20px rgba(27, 26, 26, 0.39);
+  outline: none;
+}
+
+.box::before {
+  content: "\f150";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  color: #fdfafa;
+  font-size: 27px;
+  background: #da00e0;
+  pointer-events: none;
+}
+
+.level_o select option:hover {
+  background: #19496d;
+}
+
+.box:hover::before {
+  background: #0d5594;
+}
+
+  /* На небольших экранах, где высота меньше 450 пикселей, измените стиль боковой панели (меньше отступов и меньший размер шрифта) */
+  @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+  }
+
+  </style>
+</head>
+
+<div class="sidenav">
+  <h3 class="widget-title">"image"</h3>
+    <a href="application_selection">Выбор заявки</a>
+    <a href="questionnaire">Анкета</a>
+    <a href="saveFile">Загрузка файлов</a>
+    <a href="profile">Настройка</a>
+</div>
+
+
+</html>
